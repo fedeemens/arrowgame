@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow game</title>
+
+    <!-- Customizations -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/600892d9a1.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-165916135-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-165916135-1');
+    </script>
+</head>
+<body>
+    <!-- Ventana de introduccion -->
+    <div class="instrucciones" id="instrucciones">
+        <h4>Arrow game</h4>
+        <p>Puedes usar las flechas de tu teclado o la pantalla tactil si estas desde el celular.</p>
+        <div class="instruccion">
+            <i class="fas fa-arrow-circle-left arrow-test blue"></i>
+            Desliza para el lado 
+            <br/>que indica la flecha
+        </div>
+        <div class="instruccion">
+            <i class="fas fa-arrow-circle-left arrow-test red"></i>
+            Desliza para el lado 
+            <br/>contrario de la flecha
+        </div>
+        <div class="btn-jugar" id="btnSiguiente">Jugar</div>
+    </div>
+
+    <!-- Carga de nick name -->
+    <div class="nickname" id="nicknameSeccion">
+        <p>Escribe tu nombre</p>
+        <input type="text" id="nickname" name="" placeholder="Nickname">
+        <div class="btn-jugar" id="jugar">Jugar</div>
+    </div>
+
+    <!-- Juego --> 
+    <div class="game-container">
+        <div id="time-bar-container">
+            <div id="time-bar"></div>
+        </div> 
+        <p><span id="score">0</span></p>
+    </div>
+
+    <!-- Puntajes -->
+    <div id="derrota">
+        <p>Buen intento!!</p>
+        <p class="score-p"><span id="scoreFinal"></span><br/>Puntos</p>
+        <i class="fas fa-sync-alt" id="restart"></i>
+    </div>
+
+    <footer id="footer">
+        <p>Creado por: <a href="https://github.com/fedeemens/">Emens Federico</a></p>
+    </footer>
+
+    
+    <!-- Ranking socket -->
+    <script src="https://ranking-socket.herokuapp.com/socket.io/socket.io.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Main js -->
+    <script src="main.js"></script>
+</body>
+</html>

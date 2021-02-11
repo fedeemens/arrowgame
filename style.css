@@ -1,0 +1,197 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 700;
+}
+
+body{
+    color: #333;
+    height: 100vh;
+}
+.instrucciones {
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.4s;
+    visibility: visible;
+    opacity: 1;
+    font-size: 20px;
+    padding-bottom: 5%;
+}
+.instrucciones p {
+    font-size: 22px;
+    padding: 0 30px;
+    text-align: center;
+}
+.instrucciones h4 {
+    font-size: 30px;
+}
+.instrucciones .arrow-test {
+    font-size: 80px;
+    margin: 0 10px;
+}
+.instruccion {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.btn-jugar {
+    font-size: 25px;
+    background-color: rgb(97, 185, 97);
+    color: white;
+    padding: 10px 45px;
+    border-radius: 6px;
+    cursor:pointer;
+}
+.blue {color: #36a2eb}
+.red {color: #ff6384;}
+.game-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    background: #fff; 
+}
+#score {
+    font-size: 50px;
+    font-weight: bold;
+    user-select: none;
+}
+.arrow {
+    margin-top: 50px;
+    font-size: 200px;
+    cursor: default;
+}
+.animacion {
+    animation: animacion 0.5s linear;
+}
+#derrota {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    background-color: #eee;
+    font-size: 28px;
+    height: 100vh;
+    width: 100%;
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 80px;
+    text-align: center;
+}
+#derrota .rank-global{
+    border-bottom: 1px solid #bbb;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+#derrota .rank {
+    display: flex;
+    align-items: center;
+}
+#derrota img {
+    max-height: 30px;
+    width: auto;
+}
+#restart{
+    margin-top: 50px;
+    cursor: pointer;
+    font-size: 90px;
+}
+.score-p {
+    line-height: 40px;
+    margin-top: 30px;
+}
+#scoreFinal {
+    font-size: 80px;
+    color: green;
+}
+.visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+@keyframes animacion {
+    0% {font-size: 200px;}
+    50% {font-size: 220px;}
+    100% {font-size: 200px;}
+}
+
+#time-bar-container{
+    background-color: #ccc;
+    width: 70%;
+    border-radius: 5px;
+}
+#time-bar{
+    width: 0%;
+    height: 15px;
+    background-color: #00cc99;
+    border-radius: 5px;
+}
+.nickname {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s;
+    background: #fff;
+}
+.nickname p{
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 50px;
+}
+.nickname input{
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    color: #555;
+}
+.nickname input:focus{
+    outline: none;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+.nickname .btn-jugar{
+    margin-top: 50px;
+}
+
+footer{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+footer a{
+    text-decoration: none;
+    color: #0e5b8f;
+}
